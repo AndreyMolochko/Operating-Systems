@@ -79,6 +79,16 @@ namespace ZeroLaba
         {
             return listProcesses[i].BasePriority.ToString();
         }
+
+        public String[] getPrioriteThreads(int i)
+        {
+            String[] arr = new String [listProcesses[i].Threads.Count];
+            for(int j = 0; j < arr.Length; j++)
+            {
+                arr[j] = listProcesses[i].Threads[j].BasePriority.ToString();
+            }
+            return arr;
+        }
         
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
